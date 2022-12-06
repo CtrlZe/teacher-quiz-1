@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JS Quiz Assignment</title>
+  <script src="quizproject.js"></script>
+  <link rel="stylesheet" type="text/css" href="quizproject.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+  <!--Icons-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!--Favicon-->
+  <link rel='icon' href='icons/quizIcon.png' type='image/x-icon' >
+  <!--Manifest-->
+  <link rel="manifest" href="manifest.json">
+</head>
+<body onLoad="loadQuestion()">
+
+<section id="lightbox" onclick="closeLightBox()">
+   <div id="message">This is the message</div>
+</section>
+
+<section id="lightbox2" onclick="closeLightBox()">
+  <div id="message2">
+    Welcome to the <span class="yellow">Mt. Doug Teachers Quiz!</span> <br>
+    If you get stuck on a question, click the
+    <span class="yellow">lightbulb<span class="material-icons">lightbulb</span></span>
+    to narrow down the answers.
+    You only get to use this hint <span class="yellow">twice</span> so use it wisely! <br>
+    Good luck! 
+  </div>
+</section>
+
+<p>
+  <span id="title">Mt. Doug Teachers Quiz</span>
+  <span id="hint" class="material-icons" onclick="hint()">lightbulb</span>
+  <span id="info" class="material-icons" onclick="info()">info</span>
+</p>
+
+<main class="grid-container">
+  <header class="header">
+    <div id="question">The Question</div>
+  </header>
+  
+  <aside class="left">
+    <div>
+      <div class="options" id="a" onclick="markIt('a')">A.</div>
+      <div class="options" id="b" onclick="markIt('b')">B.</div>
+      <div class="options" id="c" onclick="markIt('c')">C.</div>
+      <div class="options" id="d" onclick="markIt('d')">D.</div>
+    </div>
+  </aside> 
+
+  <figure class="right"> <img id="image" alt="image relating to the current question"></figure>
+  
+  <footer class="footer1">
+    <p id="score">Score 0/10</p>
+  </footer>
+
+  <footer class="footer2">
+    <p id="hintsDisplay">Hints Left: 2</p>
+  </footer>
+
+  <footer class="footer3">
+    <p>Featuring: Mr. Meldrum, Mr. Lansdell, Mr. Johnson, Mr. Williams, Mr. Boorman, and Mr. Quast</p>
+  </footer>
+
+</main>
+
+</body>
+</html>
